@@ -14,10 +14,10 @@ class Project(models.Model):
     def __str__(self):
         return "%s by %s" % (self.name, self.owner)
 
-class Publication(models.Model):
+class Entry(models.Model):
     title = models.CharField(blank=True, max_length=140)
     text = models.TextField(blank=True)
-    project = models.ForeignKey(Project, related_name='publications')
+    project = models.ForeignKey(Project, related_name='entries')
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
     visible = models.BooleanField(default=True)
