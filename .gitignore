@@ -1,3 +1,5 @@
-static/*
+static/admin/*
+static/debug_toolbar/*
+static/grappelli/*
 *.pyc
 */__pycache__/*
