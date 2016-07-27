@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coding Diaries{% block title %} {% endblock %}</title>
+    <title>Coding Diaries</title>
     {# Vendor CSS #}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {# CSS #}
     <link rel="stylesheet" href="{% static 'cd/css/styles.css' %}" media="screen" title="no title" charset="utf-8">
     {# Vendor JS #}
@@ -21,27 +21,11 @@
             <nav class="grey darken-3">
                 <div class="nav-wrapper">
                     <a href="#!" class="brand-logo">CodingDiaries</a>
-                    <ul class="right hide-on-med-and-down icon-menu">
-                        <li><a href="sass.html">
-                            <i class="fa fa-book fa-fw">
-                                <span class="icon-label">Projects</span>
-                            </i>
-                        </a></li>
-                        <li><a href="badges.html">
-                            <i class="fa fa-file-text-o fa-fw">
-                                <span class="icon-label">Entries</span>
-                            </i>
-                        </a></li>
-                        <li><a href="collapsible.html">
-                            <i class="fa fa-plus fa-fw">
-                                <span class="icon-label">New</span>
-                            </i>
-                        </a></li>
-                        <li><a href="mobile.html">
-                            <i class="fa fa-user fa-fw">
-                                <span class="icon-label">User</span>
-                            </i>
-                        </a></li>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html"><i class="material-icons">work</i></a></li>
+                        <li><a href="badges.html"><i class="material-icons">mode_edit</i></a></li>
+                        <li><a href="collapsible.html"><i class="material-icons">note_add</i></a></li>
+                        <li><a href="mobile.html"><i class="material-icons">perm_identity</i></a></li>
                     </ul>
                 </div>
             </nav>

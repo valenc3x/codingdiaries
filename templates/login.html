@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coding Diaries - Login</title>
+    {# Vendor CSS #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    {# CSS #}
+    <link rel="stylesheet" href="{% static 'cd/css/styles.css' %}">
+    {# Vendor JS #}
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+        <header>
+            <nav class="grey darken-3">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">CodingDiaries</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html"><i class="material-icons">work</i></a></li>
+                        <li><a href="badges.html"><i class="material-icons">mode_edit</i></a></li>
+                        <li><a href="collapsible.html"><i class="material-icons">note_add</i></a></li>
+                        <li><a href="mobile.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+            <main>
+                <div class="container">
+                    <div class="row">
+                   <form class="col s12">
+                     <div class="row">
+                       <div class="input-field col s6">
+                         <i class="fa fa-user fa-fw prefix" aria-hidden="true"></i>
+                         <input id="icon_prefix" type="text" class="validate">
+                         <label for="icon_prefix">First Name</label>
+                       </div>
+                       <div class="input-field col s6">
+                         <i class="fa fa-key fa-fw prefix" aria-hidden="true"></i>
+                         <input id="icon_telephone" type="tel" class="validate">
+                         <label for="icon_telephone">Telephone</label>
+                       </div>
+                     </div>
+                   </form>
+                 </div>
+                </div>
+            </main>
+        <footer class="page-footer grey darken-3">
+            <div class="footer-copyright">
+                <div class="container"> Coding Diaries | {% now "Y" %} </div>
+            </div>
+        </footer>
+</body>
+</html>
