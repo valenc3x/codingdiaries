@@ -11,49 +11,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     {# CSS #}
-    <link rel="stylesheet" href="{% static 'cd/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'cd/css/login.css' %}">
     {# Vendor JS #}
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script defer type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 </head>
 <body>
-        <header>
-            <nav class="grey darken-3">
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">CodingDiaries</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html"><i class="material-icons">work</i></a></li>
-                        <li><a href="badges.html"><i class="material-icons">mode_edit</i></a></li>
-                        <li><a href="collapsible.html"><i class="material-icons">note_add</i></a></li>
-                        <li><a href="mobile.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-            <main>
-                <div class="container">
-                    <div class="row">
-                   <form class="col s12">
-                     <div class="row">
-                       <div class="input-field col s6">
-                         <i class="fa fa-user fa-fw prefix" aria-hidden="true"></i>
-                         <input id="icon_prefix" type="text" class="validate">
-                         <label for="icon_prefix">First Name</label>
-                       </div>
-                       <div class="input-field col s6">
-                         <i class="fa fa-key fa-fw prefix" aria-hidden="true"></i>
-                         <input id="icon_telephone" type="tel" class="validate">
-                         <label for="icon_telephone">Telephone</label>
-                       </div>
-                     </div>
-                   </form>
-                 </div>
-                </div>
-            </main>
-        <footer class="page-footer grey darken-3">
-            <div class="footer-copyright">
-                <div class="container"> Coding Diaries | {% now "Y" %} </div>
+    <main class="login-page grey darken-3">
+        <div class="container">
+            <div class="row">
+                <h1 class="login-title">Coding Diaries</h1>
             </div>
+            <div class="row">
+                {% if error %}
+                <div class="col s4 offset-s4">
+                    <div class="error-message z-depth-2">
+                        {{ error }}
+                    </div>
+                </div>
+                {% endif %}
+                <form class="col s12" method="post"> {% csrf_token %}
+                    <div class="row">
+                        <div class="input-field col s6 offset-s3">
+                            <i class="fa fa-user prefix"></i>
+                            <input id="username" type="text" name="username" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6 offset-s3">
+                            <i class="fa fa-key prefix"></i>
+                            <input id="password" type="password" name="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4 offset-s5">
+                            <input class="waves-effect waves-light btn" type="submit" name="login" value="Login">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <i class="fa fa-code"></i> <i class="fa fa-book"></i> | {% now "Y" %}
         </footer>
+    </main>
 </body>
 </html>

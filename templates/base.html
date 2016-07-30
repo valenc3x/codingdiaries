@@ -13,6 +13,7 @@
     {# CSS #}
     <link rel="stylesheet" href="{% static 'cd/css/styles.css' %}" media="screen" title="no title" charset="utf-8">
     {# Vendor JS #}
+    <script defer type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 </head>
@@ -40,7 +41,7 @@
                                 <span class="icon-label">New</span>
                             </span>
                         </a></li>
-                        <li><a href="mobile.html">
+                        <li><a href="{% url 'logout' %}">
                             <span class="icon">
                                 <i class="fa fa-user fa-fw"> </i>
                                 <span class="icon-label">User</span>
@@ -56,9 +57,7 @@
             </div>
         </main>
         <footer class="page-footer grey darken-3">
-            <div class="footer-copyright">
-                <div class="container"> Coding Diaries | {% now "Y" %} </div>
-            </div>
+            <i class="fa fa-code"></i> <i class="fa fa-book"></i> | {% now "Y" %}
         </footer>
 </body>
 </html>

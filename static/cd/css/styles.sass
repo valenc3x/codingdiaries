@@ -1,27 +1,7 @@
-@import '_cd_variables.scss'
+@import '_base.sass'
 
-// sticky footer: http://materializecss.com/footer.html#sticky-footer
-body
-    display: flex
-    min-height: 100vh
-    flex-direction: column
-
-main
-    flex: 1 0 auto
-
-// menu-icon transition
-ul.icon-menu
-    a
-        max-height: 65px
-        span.icon
-            width: 30px
-            display: inline-block
-            overflow: hidden
-            position: relative
-            @include transition(width 0.7s)
-            &:hover
-                width: 100px
-            .icon-label
-                margin: 0 10px
-                position: absolute
-                font-family: 'Roboto', sans-serif
+.page-footer
+    height: $space * 2.5
+    color: $white
+    line-height: 1em
+    text-align: center

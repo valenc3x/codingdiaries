@@ -1,5 +1,10 @@
-$space: 20px;
+@import 'https://fonts.googleapis.com/css?family=Dosis';
 
+$space: 20px;
+$white: #F5F5F5;
+$gray: #A0A0A0;
+$cd-black: #393939;
+$cd-red: #E53B51;
 
 @mixin keyframe ($animation_name) {
     @-webkit-keyframes $animation_name {

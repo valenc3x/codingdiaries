@@ -1,0 +1,55 @@
+@import '_cd_variables.scss'
+
+// sticky footer: http://materializecss.com/footer.html#sticky-footer
+body
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+
+main
+    flex: 1 0 auto
+
+// title
+h1
+    font-size: 5em
+    font-family: 'Dosis', sans-serif
+    color: $white
+
+// main header
+h2
+    font: 'Roboto' sans-serif 1.2em
+    line-height: 1.3em
+    text-align: left
+
+// secondary header
+h3
+    font: 'Roboto' sans-serif 1.1em
+    line-height: 1.2em
+
+.bodycopy
+    font: 'Roboto', sans-serif 1em
+    line-height: 1.1em
+    text-align: justify
+    color: $white
+
+.byline
+    font: 'Roboto', sans-serif 0.8em
+    line-height: 1em
+    color: $white
+
+// menu-icon transition
+ul.icon-menu
+    a
+        max-height: 65px
+        span.icon
+            width: 30px
+            display: inline-block
+            overflow: hidden
+            position: relative
+            @include transition(width 0.7s)
+            &:hover
+                width: 100px
+            .icon-label
+                margin: 0 10px
+                position: absolute
+                font-family: 'Roboto', sans-serif
